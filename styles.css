@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,400&family=Roboto:wght@400;700&display=swap');
+
+/* CSS VARIABLES */
+:root {
+    --main-color: #7743DB;
+    --secondary-color: #fdbb2d;
+
+    --text-100: #f8f9fa;
+    --text-300: #dee2e6;
+    --text-500: #212529;
+
+    --main-font: "Nunito", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+
+    --gradient: linear-gradient(156deg, rgba(2, 0, 36, .8) 0%, rgba(9, 9, 121, 0.8) 0%, rgba(175, 133, 254, .8) 100%, rgba(0, 212, 255, .8) 100%);
+    /* --gradient: linear-gradient(156deg, rgba(119,67,219,0.9) 0%, rgba(253,187,45,0.9) 100%); */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+.social-icons {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    padding: 0 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.social-icons i {
+    color: var(--text-500);
+    font-size: 1.3rem;
+    transition: .3s ease-in-out;
+}
+
+.social-icons i:hover{
+    color: var(--main-color);
+    transform: translateX(-5px);
+}
+
+#home {
+    background: var(--gradient), url(images/college-img.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1668269422 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1668269422 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 113px;
+}
+
+.custom-shape-divider-bottom-1668269422 .shape-fill {
+    fill: #fff;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1668269422 svg {
+        width: calc(133% + 1.3px);
+        height: 99px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1668269422 svg {
+        width: calc(133% + 1.3px);
+        height: 106px;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5rem;
+    padding-top: 1rem;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-items ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-items ul li a {
+    color: var(--text-100);
+    text-transform: uppercase;
+    margin-right: 2rem;
+    transition: 0.4s;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.menu-items ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in;
+}
+
+.menu-items ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-items ul li a:hover::after {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-500);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--main-color);
+    opacity: .9;
+    color: var(--text-100);
+    cursor: pointer;
+    filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.2));
+
+}
+
+.hamburger {
+    font-size: 2rem;
+    color: var(--text-100);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text-100);
+    /* letter-spacing: 2px; */
+}
+
+nav .logo span {
+    color: var(--secondary-color);
+}
+.main-content {
+    max-width: 80%;
+    margin: auto;
+}
+
+.main-content-text {
+    height: 90vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-content-text h1 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+    text-align: center;
+    filter: drop-shadow(1px 6px 20px black) ;
+
+}
+
+.main-content-text p {
+    text-align: center;
+    color: var(--text-100);
+    filter: drop-shadow(1px 6px 20px black) ;
+}
+
+.scroll-arrow {
+    z-index: 9999;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.scroll-arrow i {
+    color: var(--secondary-color);
+    animation: arrowUp 0.7s infinite linear alternate;
+} 
+
+@keyframes arrowUp {
+    0% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+/* ======== Media Queries ========= */
+/* For mobile */
+@media (max-width: 767px) {
+    .bar {
+        display: block;
+    }
+    .bar.active {
+        display: none;
+    }
+    .cross {
+        display: none;
+    }
+    .cross.active {
+        display: block;
+    }
+    nav {
+        margin: 0 10px;
+    }
+    header {
+        position: relative;
+    }
+
+    .social-icons {
+        padding:1px;
+    }
+    .menu-items {
+        position: absolute;
+        top: 100%;
+        opacity: 0;
+        right: 0;
+        gap: 2rem;
+        background-color: var(--main-color);
+        flex-direction: column;
+        padding: 4rem 4rem;
+        z-index: 999999;
+        border-radius: 50px 0 0 50px;
+        transition: .5s ease-in-out;
+    }
+    .menu-items.active {
+        opacity: 1;
+    }
+    .menu-items ul {
+        flex-direction: column;
+        margin: 3px 0;
+        gap: 2rem;
+    }
+    .menu-items ul li a {
+        margin: 0;
+    }
+
+    .main-content-text {
+        justify-content: start;
+    }
+    .main-content-text p{
+        font-size: .85rem;
+    }
+    .main-content-text h1{
+        margin-top: 5px;
+        font-size: 2rem;
+    }
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hamburger {
+        display: none;
+        color: black;
+    }
+
+    nav {
+        margin: 0 15px;
+    }
+}
