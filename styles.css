@@ -13,7 +13,6 @@
     --secondary-font: "Roboto", sans-serif;
 
     --gradient: linear-gradient(156deg, rgba(2, 0, 36, .8) 0%, rgba(9, 9, 121, 0.8) 0%, rgba(175, 133, 254, .8) 100%, rgba(0, 212, 255, .8) 100%);
-    /* --gradient: linear-gradient(156deg, rgba(119,67,219,0.9) 0%, rgba(253,187,45,0.9) 100%); */
 
 }
 
@@ -110,6 +109,18 @@ nav {
     margin: 0 5rem;
     padding-top: 1rem;
 }
+nav .logo {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text-100);
+    /* letter-spacing: 2px; */
+}
+
+nav .logo span {
+    color: var(--secondary-color);
+}
 
 .menu-items {
     display: flex;
@@ -176,18 +187,6 @@ nav {
     color: var(--text-100);
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--text-100);
-    /* letter-spacing: 2px; */
-}
-
-nav .logo span {
-    color: var(--secondary-color);
-}
 .main-content {
     max-width: 80%;
     margin: auto;
